@@ -1,4 +1,4 @@
-{pkgs, ... }:
+{pkgs, inputs , ... }:
 
 {
 environment.systemPackages = with pkgs; [
@@ -10,7 +10,7 @@ environment.systemPackages = with pkgs; [
 	
 	inputs.zen-browser.packages."${system}".default
 	
-	inputs.zen-browser.packages."${system}".default.override {
+	( inputs.zen-browser.packages."${system}".default.override  {
 	policies = {
    AutofillAddressEnabled = true;
     AutofillCreditCardEnabled = false;
@@ -29,8 +29,8 @@ environment.systemPackages = with pkgs; [
       Fingerprinting = true;
     };
   };
-}	
-
+} 
+)
 	
 	#tui
 	vim zoxide yt-dlp ripgrep git mpv ffmpeg bat tmux nushell
