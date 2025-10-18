@@ -5,12 +5,11 @@ environment.systemPackages = with pkgs; [
 	#gui
 	onlyoffice-desktopeditors vscode ghostty pairdrop thunderbirdPackages.thunderbird-latest
 	brave audio-recorder tenacity obsidian
-	windsurf firefox-devedition
+	windsurf firefox-devedition blender
         #pairdrop beeper 
 	
-	inputs.zen-browser.packages."${system}".default
 	
-	( inputs.zen-browser.packages."${system}".default.override  {
+	( inputs.zen-browser.packages."${system}".beta-unwrapped.override  {
 	policies = {
    AutofillAddressEnabled = true;
     AutofillCreditCardEnabled = false;
