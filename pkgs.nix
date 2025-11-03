@@ -5,9 +5,11 @@ environment.systemPackages = with pkgs; [
 	#gui
 	onlyoffice-desktopeditors vscode ghostty pairdrop thunderbirdPackages.thunderbird-latest
 	brave audio-recorder tenacity obsidian
-	windsurf firefox-devedition blender
+	windsurf blender gimp3 planify gnome-frog
         #pairdrop beeper 
-	
+
+
+
 	
 	( inputs.zen-browser.packages."${system}".beta-unwrapped.override  {
 	policies = {
